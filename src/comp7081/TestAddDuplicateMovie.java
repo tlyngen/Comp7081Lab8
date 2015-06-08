@@ -18,26 +18,17 @@ import comp7081.interfaces.IMovieList;
  */
 
 public class TestAddDuplicateMovie extends TestCase {
-    //private IMovie movieMock;
-    //private IMovieList movieListMock;
     private MovieList movieList;
     private Movie movie;
     
     @Before
     public void setUp() {
-        //movieMock = EasyMock.createMock(IMovie.class);
-        //movieListMock = EasyMock.createMock(IMovieList.class);
         movie = new Movie();
         movieList = new MovieList();
     }
     
     @Test
     public void testName() throws Exception {
-        /*EasyMock.expect(movieListMock.add(movieMock)).andReturn("OK");
-         EasyMock.expect(movieListMock.add(movieMock)).andThrow(new Exception("Duplicate movies not allowed"));
-         EasyMock.replay(movieListMock);
-         assertEquals("Cannot add duplicate movie.","FAIL", movieListMock.add(movieMock));
-         */
         movie.setName("StarWars");
         assertEquals("Size of movie list should be 0.", 0, movieList.size());
         movieList.add(movie);

@@ -18,32 +18,17 @@ import comp7081.interfaces.IMovieList;
  */
 
 public class TestEmptyName extends TestCase {
-    //private IMovie movieMock;
-    //private IMovieList movieListMock;
     private Movie movie;
     
     @Before
     public void setUp() {
-        //movieMock = EasyMock.createMock(IMovie.class);
-        //movieListMock = EasyMock.createMock(IMovieList.class);
         movie = new Movie();
         
     }
     
     @Test
     public void testName() {
-        /*
-         EasyMock.expect(movieListMock.add(movieMock)).andReturn("OK");
-         EasyMock.expect(movieMock.setName("StarWars")).andReturn("OK");
-         EasyMock.expect(movieMock.setName(null)).andThrow(new RuntimeException());
-         EasyMock.expect(movieMock.setName("StarWars")).andReturn("OK");
-         
-         EasyMock.replay(movieMock);
-         EasyMock.replay(movieListMock);
-         
-         assertEquals("Movie name cannot be empty.","FAIL", movieMock.setName(null));
-         assertEquals("Movie name cannot be empty.","OK", movieMock.setName("StarWars"));
-         */
+        
         movie.setName("StarWars");
         assertEquals("Movie name cannot be empty.","FAIL", movie.setName(""));
         assertEquals("Movie name cannot be empty.","FAIL", movie.setName(null));
