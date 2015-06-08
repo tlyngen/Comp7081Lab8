@@ -1,7 +1,7 @@
 /**
  * 
  */
-package comp7081;
+package comp7081.examples;
 
 import junit.framework.TestCase;
 
