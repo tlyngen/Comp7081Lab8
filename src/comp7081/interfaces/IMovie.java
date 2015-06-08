@@ -9,4 +9,5 @@ package comp7081.interfaces;
  */
 public interface IMovie {
 	public String getName();
+	public String setName(String mName);
 }
